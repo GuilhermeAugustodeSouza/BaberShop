@@ -3,18 +3,26 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+.containner{
+	width: 100%;
+}
+
 header {
 	background: #000000;
 	padding: 20px 0;
 	
 }
-.containner{
-	
-}
+
 .imgHeader{
 	max-width: 300px;
 	border-radius: 50%;
-	box-shadow: 5px 5px 5px #ffffff;
+	box-shadow: 3px 3px 5px #ffffff;
+	cursor: pointer;
+	transition: 2s;
+}
+.imgHeader:hover{
+	box-shadow:-3px -3px 2px rgb(104, 2, 104);
 }
 .caixa {
 	position: relative;
@@ -26,6 +34,7 @@ nav {
     position: absolute;
 	top: 110px;
 	right: 0;
+	
 }
 
 nav li  {
@@ -41,21 +50,27 @@ nav li a {
 	font-weight: bold;
 	font-size: 22px;
 	text-decoration: none;
+	transition: 3s;
 }
 nav a:hover{
 	color: greenyellow;
 	text-decoration: underline;
+	opacity: 90%;
 }
 #banner{
 	
 width: 100%;
 
-
 }
 
 .principal{
-	background: #CCCCCC;
+	background: #000000;
 	padding: 30px;
+	color: #ffffff;
+	line-height: 35px;
+	box-shadow: inset -5px -5px 20px #ffffff;
+
+
 }
 
 .titulo-principal {
@@ -63,15 +78,21 @@ width: 100%;
 }
 
 .titulo-centralizado {
-	text-align: center
+	text-align: center;
+	margin-bottom:10px;
+	cursor: pointer;
+	transition: 1.5s;
 }
-
+.titulo-centralizado:hover{
+	color:rgb(104, 2, 104);
+	opacity: 50%;
+}
 p {
 	text-align: center;
 }
 
 #missao {
-	font-size: 20px
+	font-size: 20px;
 }
 
 em strong {
@@ -79,12 +100,19 @@ em strong {
 }
 
 .itens {
-	font-style: italic
+	font-style: italic;
+	list-style-type:circle;
+	margin:10px auto 0 50px;
+	font-size: 1rem;
 }
 
 .beneficios {
-	background: #FFFFFF;
+	background: #000000;
+	color:#ffffff;
 	padding: 20px;
+	box-shadow: inset -5px -5px 20px #ffffff;
+	
+	
 }
 
 .listFooter {
@@ -98,19 +126,65 @@ em strong {
 
 .imagembeneficios {
 	width: 50%;
+	border-radius: 5px;
+	transition: 1.5s;
+}
+.imagembeneficios:hover{
+	opacity: 50%;
+	box-shadow: 2px 1.5px 5px #ffffff;
+	width:52%;
 }
 .copyright{
 	color: #ffffff;
 	font-size:13px ;
-	margin:20px 0 0 ;
+	margin: 20px 0 5px 0 ;
 }
 footer{
     text-align:center;
 	background-color: #000000;
-	padding: 40px 0;
+	padding: 10px 0;
+	box-shadow: inset -5px -5px 10px #ffffff;
 }
 .imgFooter{
 	max-width: 220px;
 	border-radius: 50%;
 	box-shadow: 2px 2px 2px #ffffff;
+	cursor: pointer;
+	transition: 2s;
+}
+.imgFooter:hover{
+box-shadow:-2px -2px 2px rgb(104, 2, 104);
+}
+
+@media(max-width: 940px){
+	.containner{
+		width: auto;
+	}
+	.caixa{
+		width:auto;
+		height: 50px;
+	}
+nav  {
+	display:flex;
+	position:relative;
+   top: -45px;
+   left: 80px;
+   width:100%;
+   
+   
+}
+nav ul li a{
+	font-size: 10px;
+}
+.imgHeader{
+	max-width: 50px;
+	margin-left: 20px;
+}
+footer{
+	width:auto;
+	height:150px
+}
+.imgFooter{
+	max-width: 80px;
+}
 }
