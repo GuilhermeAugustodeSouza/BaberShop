@@ -42,7 +42,7 @@ nav a:hover{
 	text-decoration: underline;
 }
 .Produtos {
-  width:940px ;
+  width:850px ;
   margin: 0 auto ;
   padding: 50px 0 ;
   
@@ -61,12 +61,15 @@ nav a:hover{
 }
 .Produtos li:hover{
 	border-color:rgb(78, 44, 199);
+	box-shadow: 2px 2px 5px rgb(31, 30, 30);
+	transition: 150ms;
+	cursor: pointer;
 }
 .Produtos li:active{
 	border-color:chartreuse;
 }
 .Produtos li:hover h2{
-	font-size: 45px;
+	font-size: 30px;
 	
 }
 .Produtos h2{
@@ -88,7 +91,7 @@ font-size:18px;
 	margin:20px 0 0 ;
 }
 footer{
-    text-align:center;
+        text-align:center;
 	background-color: #000000;
 	padding: 40px 0;
 }
@@ -97,8 +100,18 @@ footer{
 	border-radius: 50%;
 	box-shadow: 2px 2px 2px #ffffff;
 }
+@media(max-width:940px){
 
+	.Produtos{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content:space-around;
+		align-items: center;
+	}
+}
 
+/*estilos abaixo, são direcionados a table form*/
 main{
 		width: 940px;
 		margin: 0 auto;
@@ -151,4 +164,59 @@ td,th{
 table:hover{
 font-size: 18px;
 	
+}
+
+.botao a{
+	padding:10px 10px;
+	background-color: aqua;
+	border-radius: 50%;
+	text-decoration: none;
+}
+@media(max-width: 940px){
+	.containner{
+		width: auto;
+		
+	}
+	.caixa{
+		width:auto;
+		height: 50px;
+	}
+nav  {
+	display:flex;
+	position:relative;
+   top: -45px;
+   left: 80px;
+   width:100%;
+   
+   
+}
+nav ul li a{
+	font-size: 10px;
+}
+.imgHeader{
+	max-width: 50px;
+	margin-left: 20px;
+}
+ main {
+	width:auto;
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	margin-left: 40px;
+	padding: 50px;
+}
+form input{
+	width:auto;
+}
+footer{
+	width:auto;
+	height:150px
+}
+.imgFooter{
+	max-width: 80px;
+}
+.copyright{
+	margin-top: 5px;
+}
 }
